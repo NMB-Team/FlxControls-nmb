@@ -11,12 +11,12 @@ class OtherOrb extends Orb
 	public function new(x = 0.0, y = 0.0, colorIndex:Int)
 	{
 		super(x, y, 50, null, "assets/OtherOrbShadow.png");
-		
+
 		loadGraphic("assets/OtherOrb.png", true, 140, 140);
 		animation.frameIndex = colorIndex;
 		setBodyMaterial(1, 0.0, 0.0, 0.5);
 	}
-	
+
 	/**
 	 * Randomizes the position of this orb within the given bounds
 	 */
@@ -26,7 +26,7 @@ class OtherOrb extends Orb
 		y = body.position.y = FlxG.random.int(minY, maxY - Math.ceil(height));
 		return this;
 	}
-	
+
 	/**
 	 * Randomizes the velocity of this orb with the given absolute speed range and a random angle
 	 */

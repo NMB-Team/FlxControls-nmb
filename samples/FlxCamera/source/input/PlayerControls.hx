@@ -18,7 +18,7 @@ enum Input
 	// Movement
 	@:analog(x, y)
 	MOVE;
-	
+
 	/** Iterates the various camera styles */
 	@:analog(delta)
 	STYLE;
@@ -31,7 +31,7 @@ enum Input
 	/** Adjusts the camera lerp */
 	@:analog(delta)
 	LERP;
-	
+
 	/** Triggers screen shake */
 	SHAKE;
 }

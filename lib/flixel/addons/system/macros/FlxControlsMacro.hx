@@ -1,5 +1,6 @@
 package flixel.addons.system.macros;
 
+#if macro
 // import flixel.input.FlxInput;
 import haxe.macro.Expr;
 import haxe.macro.Context;
@@ -656,3 +657,4 @@ enum ActionType
     ANALOG(arg:String);
     ANALOG_XY(argX:String, argY:String);
 }
+#end

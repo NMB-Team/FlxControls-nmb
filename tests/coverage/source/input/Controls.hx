@@ -20,15 +20,15 @@ import flixel.input.keyboard.FlxKey as Key;
  */
 enum Action
 {
-    @:inputs([Key.W, GPad.Y, RIGHT_STICK_DIGITAL_UP   , VPad.Y]) YELLOW;
-    @:inputs([Key.S, GPad.A, RIGHT_STICK_DIGITAL_DOWN , VPad.A]) GREEN;
-    @:inputs([Key.A, GPad.X, RIGHT_STICK_DIGITAL_LEFT , VPad.X]) BLUE;
-    @:inputs([Key.D, GPad.B, RIGHT_STICK_DIGITAL_RIGHT, VPad.B]) RED;
-    
-    // @:inputs([ArrowKeys, DPad, VPadArrows, LEFT_ANALOG_STICK, MouseMove(BOTH, 0.1)])
-    @:inputs([ArrowKeys, DPad, VPadArrows, LEFT_ANALOG_STICK, VPad.STICK])
-    // @:inputs([ArrowKeys, Face, DPad, LEFT_ANALOG_STICK, RIGHT_ANALOG_STICK])
-    @:analog(x, y) MOVE;
+	@:inputs([Key.W, GPad.Y, RIGHT_STICK_DIGITAL_UP   , VPad.Y]) YELLOW;
+	@:inputs([Key.S, GPad.A, RIGHT_STICK_DIGITAL_DOWN , VPad.A]) GREEN;
+	@:inputs([Key.A, GPad.X, RIGHT_STICK_DIGITAL_LEFT , VPad.X]) BLUE;
+	@:inputs([Key.D, GPad.B, RIGHT_STICK_DIGITAL_RIGHT, VPad.B]) RED;
+
+	// @:inputs([ArrowKeys, DPad, VPadArrows, LEFT_ANALOG_STICK, MouseMove(BOTH, 0.1)])
+	@:inputs([ArrowKeys, DPad, VPadArrows, LEFT_ANALOG_STICK, VPad.STICK])
+	// @:inputs([ArrowKeys, Face, DPad, LEFT_ANALOG_STICK, RIGHT_ANALOG_STICK])
+	@:analog(x, y) MOVE;
 }
 
 class Controls extends FlxControls<Action> {}

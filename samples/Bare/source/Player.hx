@@ -12,36 +12,36 @@ class Player extends FlxSprite
 	 * How big the tiles of the tilemap are.
 	 */
 	static inline var TILE_SIZE:Int = 32;
-	
+
 	/**
 	 * How many pixels to move each frame.
 	 */
 	static inline var MOVEMENT_SPEED:Int = 2;
-	
+
 	static var controls:Controls;
-	
+
 	var _virtualPad:FlxVirtualPad;
 	var _analogWidget:AnalogWidget;
-	
+
 	var moveX:Float = 0;
 	var moveY:Float = 0;
-	
+
 	public function new(X:Int, Y:Int)
 	{
 		// X,Y: Starting coordinates
 		super(X, Y);
-		
+
 		// Make the player graphic.
 		makeGraphic(TILE_SIZE, TILE_SIZE, FlxColor.WHITE);
-		
+
 		addInputs();
-		
+
 		#if debug
 		final move = controls.MOVE;
 		FlxG.watch.addFunction("move.x|y", ()->'( x: ${move.x} | y: ${move.y} )');
 		#end
 	}
-	
+
 	function addInputs():Void
 	{
 		controls = new Controls("Main");
@@ -50,7 +50,7 @@ class Player extends FlxSprite
 		#else
 		FlxG.inputs.addInput(controls);
 		#end
-		
+
 		// Add on screen virtual pad to demonstrate UI buttons tied to actions
 		_virtualPad = new FlxVirtualPad(FULL, NONE);
 		_virtualPad.alpha = 0.5;
